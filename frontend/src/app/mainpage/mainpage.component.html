@@ -1,0 +1,30 @@
+<table>
+    <thead>
+      <tr>
+        <th>Felhasználó</th>
+        <th> adatok</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of users;">
+        <td>{{element.username}}</td>
+        <td><button type="button" (click)="details(element.username)">Tovább</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <td><button type="button" (click)="addCar()">Autó hozzáadás</button></td>
+  <table>
+    <thead>
+      <tr>
+        <th>Autók</th>
+        <th>adatai</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of cars;">
+        <td>{{element.brand}}</td>
+        <td><button type="button" (click)="cardetails(element.brand)">Tovább</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/login']">Kijelentkezés</a>

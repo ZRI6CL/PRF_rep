@@ -1,0 +1,24 @@
+<div>
+    <div>
+      <label>Car Brand:</label>
+      <input [(ngModel)]="car.brand" id="carbrand" type="text" required />
+    </div>
+    <div>
+      <label>Type:</label>
+      <input [(ngModel)]="car.type" id="type" type="text" required />
+    </div>
+    <div>
+      <label>Colour:</label>
+      <input [(ngModel)]="car.colour" id="colour" type="text" required />
+    </div>
+    <div>
+      <label>Fuel:</label>
+      <input [(ngModel)]="car.fuel" id="fuel" type="text" required />
+    </div>
+    <button type="button" (click)="back()">Főmenü</button>
+    <button *ngIf="access == '3'" type="button" (click)="edit()">Szerkeszt</button>
+    <button *ngIf="access == '3'" type="button" (click)="del()">Töröl</button>
+  </div>
+  <div>
+    <strong> {{uzenet}}</strong>
+  </div>
